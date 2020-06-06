@@ -1,0 +1,21 @@
+.Product {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.Image-Square {
+  background: #EEEEEE 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  height: 230px;
+  opacity: 1;
+  width: 262px;
+}
+
+.Product-Image {
+  height: 200px;
+  margin-top: 10px;
+}

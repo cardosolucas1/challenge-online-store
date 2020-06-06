@@ -1,0 +1,9 @@
+.Cart {
+  display: flex;
+  border: 1px solid blueviolet;
+}
+
+.EmptyCart {
+  height: 100%;
+  text-align: center;
+}

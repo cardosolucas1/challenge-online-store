@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Consulta Remedios Frontend Challenge
 
-## Available Scripts
+O teste consiste em construir a interface de um pseudo ecommerce de games,
+conforme as telas a seguir:
 
-In the project directory, you can run:
+### Carrinho vazio
+![mock](https://i.imgur.com/BL3L07z.png)
 
-### `npm start`
+### Com produtos no carrinho
+![mock](https://i.imgur.com/8Ou0fpu.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Sobre o estilo
+* Acesse as [**specs**](https://xd.adobe.com/spec/75b714d8-3dc2-4c5c-545f-893589786ad3-0386/) para obter mais detalhes como
+o nome da fonte utilizada, tamanhos, cores e espaçamentos. **Senha:** CRtest2018
+* Você pode baixar os assets [**aqui**](https://github.com/ConsultaRemedios/frontend-challenge/tree/master/assets)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Requisitos
+* Os produtos devem ser renderizados dinamicamente através do [mock json](https://github.com/ConsultaRemedios/frontend-challenge/blob/master/products.json) presente neste repositório
+* Os valores exibidos no checkout (frete, subtotal e total) devem ser calculados dinamicamente
+* O usuário poderá adicionar e remover produtos do carrinho
+* O botão de adicionar ao carrinho será exibido no over de seu respectivo produto
+* O botão de remover o item do carrinho será exibido no over de seu respectivo item no carrinho
+* O usuário poderá ordenar os produtos por preço, popularidade (score) e ordem alfabética.
+* A cada produto adicionado, deve-se somar R$ 10,00 ao frete.
+* O frete é grátis para compras acima de R$ 250,00.
+* A aplicação deve estar hospedada em um domínio publico.
 
-### `npm test`
+## O que iremos avaliar
+Levaremos em conta os seguintes critérios:
+* Cumprimento dos requisitos
+* Fidelidade do layout e fluidez da UX
+* Organização do código e boas práticas
+* Domínio das linguagens, bibliotecas e ferramentas utilizadas
+* Organização dos commits
+* Escrita e cobertura de testes
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Sobre a entrega
+Não estipulamos um prazo para a entrega do teste, apenas pedimos que, antes de iniciá-lo,
+nos informe uma data estimada de entrega.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Assim que concluir o teste, nos encaminhe a url do repositório onde o teste foi escrito e a url onde a aplicação está hospedada.
