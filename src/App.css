@@ -12,8 +12,9 @@
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #E1E1E1;
   display: flex;
-  height: 300px;
-  left: 74%;
+  min-height: 300px;
+  left: 73%;
+  min-width: 20%;
   padding: 1%;
   opacity: 1;
 }
