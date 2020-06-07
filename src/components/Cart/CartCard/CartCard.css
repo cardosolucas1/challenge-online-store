@@ -1,0 +1,26 @@
+.CardProduct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cardSquare {
+  align-items: center;
+  background: #EEEEEE 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  margin-right: 3%;
+  margin-top: 3%;
+  opacity: 1;
+  padding: 3%;
+}
+
+.cardDetails {
+  text-align: start;
+}
+
+.iconRemoveItem {
+  min-width: 50px;
+  min-width: 50px;
+  align-self: center;
+  cursor: pointer;
+}
