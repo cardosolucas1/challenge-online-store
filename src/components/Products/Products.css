@@ -1,4 +1,14 @@
 .Products {
   display: flex;
   flex-wrap: wrap;
+  margin-right: 25%;
+}
+
+.AddToCart {
+  margin-bottom: 53px;
+}
+
+.AddToCart:hover {
+  color: grey;
+  cursor: pointer;
 }
