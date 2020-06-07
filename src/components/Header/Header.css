@@ -1,26 +1,26 @@
 .Container {
-  font-weight: 700;
+  color: #363636;
   display: flex;
   flex-direction: row;
-  height: 6%;
-  justify-content: space-between;
-  padding: 0 6%;
-  text-align: center;
   font-family: Open Sans;
   font-size: 2em;
+  font-weight: 700;
+  height: 6%;
+  justify-content: space-between;
   letter-spacing: 0px;
-  color: #363636;
+  margin-right: 25%;
   opacity: 1;
+  padding: 0 6%;
+  text-align: center;
 }
 
 .select {
   appearance: none;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: url('./arrow-down-icon.svg') 90.5% 50% no-repeat;
   border: 1px solid #E1E1E1;
   border-radius: 4px;
   opacity: 1;
   padding: 4% 15%;
-  background: url('./arrow-down-icon.svg') 90.5% 50% no-repeat;
 }
 
 .select option {

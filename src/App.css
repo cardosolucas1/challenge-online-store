@@ -1,5 +1,5 @@
 
-.Home-Container { 
+.Home-Container {
   display: flex;
   flex-direction: row;
   font-family: 'Open Sans', sans-serif;
@@ -8,10 +8,19 @@
 }
 
 .Cart-Aside {
+  position: fixed;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #E1E1E1;
   display: flex;
   height: 300px;
-  min-width: 20%;
+  left: 74%;
+  padding: 1%;
   opacity: 1;
+}
+
+@media ( max-width: 750px ) {
+  .Cart-Aside {
+    max-width: 30%;
+    left: 69%;
+  }
 }

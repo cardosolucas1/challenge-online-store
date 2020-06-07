@@ -26,7 +26,7 @@ class Cart extends React.Component {
     const SelectedProducts = [];
     return (
       <div>
-        <div>
+        <div className="Cart-Title">
           <p>Carrinho</p>
         </div>
         <div>
