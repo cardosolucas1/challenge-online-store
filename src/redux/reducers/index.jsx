@@ -1,18 +1,28 @@
 import { ADD_TO_CART } from '../actions';
+import { FILTER_BY_SELECT } from '../actions';
 
 const INITIAL_STATE = {
   cartList: [],
+  quantity: 0,
+  filter: 'Mais populares',
 }
 
 function checkProduct(state, action) {
   const { cartList } = state;
-  return ({...state, cartList: [...cartList, action.payload] });
+  return ({
+    ...state,
+    cartList: [...cartList, action.payload],
+    quantity: cartList.length + 1,
+  });
 }
 
 function addToCartReducer(state = INITIAL_STATE, action) {
+  const { payload } = action;
   switch(action.type) {
     case ADD_TO_CART:
       return checkProduct(state, action);
+    case FILTER_BY_SELECT:
+      return ({...state, filter: payload })
     default:
       return state;
   }

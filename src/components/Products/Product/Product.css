@@ -26,3 +26,8 @@
   height: 200px;
   margin-top: 10px;
 }
+
+.PriceStyle {
+  color: #3487DC;
+  font: Bold 16px/22px Open Sans;
+}

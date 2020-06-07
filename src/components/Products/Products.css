@@ -5,10 +5,13 @@
 }
 
 .AddToCart {
+  color: #3487DC;
+  font-weight: 700;
   margin-bottom: 53px;
 }
 
 .AddToCart:hover {
-  color: grey;
+  color: #3487DC;
+  font-weight: 200;
   cursor: pointer;
 }

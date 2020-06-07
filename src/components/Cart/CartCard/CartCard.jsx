@@ -10,7 +10,7 @@ function CartCard({ product: { name, price, image, quantity } }) {
       </div>
       <div className="cardDetails">
         <p>{name}</p>
-        <p>R$ {price}</p>
+        <p className="priceStyle">R$ {price}</p>
         <p>{quantity}</p>
       </div>
       <div className="iconRemoveItem">

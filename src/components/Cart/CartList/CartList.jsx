@@ -23,12 +23,21 @@ class Cart extends React.Component {
       )));
   }
 
+  renderQuantity(totalQuantity) {
+    if (totalQuantity === 1) {
+      return (
+        <span>({`${totalQuantity} item`})</span>
+      );
+    }
+    return (<span>({`${totalQuantity} itens`})</span>);
+  }
+
   render() {
-    const { cartList } = this.props;
+    const { cartList, totalQuantity } = this.props;
     return (
       <div>
         <div className="Cart-Title">
-          <p>Carrinho</p>
+        <p>Carrinho {this.renderQuantity(totalQuantity)}</p>
         </div>
         <div>
           {(cartList.length === 0) ? this.renderEmptyCart() : this.renderCart()}
@@ -39,6 +48,7 @@ class Cart extends React.Component {
 }
 const mapStateToProps = (state) => ({
   cartList: state.cartList,
+  totalQuantity: state.quantity,
 });
 
 export default connect(mapStateToProps)(Cart);

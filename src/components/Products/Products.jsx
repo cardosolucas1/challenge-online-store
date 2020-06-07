@@ -1,14 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Product from './Product/Product';
 import './Products.css';
 
 class Products extends React.Component {
+  filterProducts() {
+    const { products, filterBy } = this.props;
+    switch(filterBy) {
+      case 'Mais populares':
+        return products.sort((a, b) => (a.score < b.score) ? 1 : -1);
+      case 'Maior preço':
+        return products.sort((a, b) => (a.price < b.price) ? 1 : -1);
+      case 'Menor preço':
+        return products.sort((a, b) => (a.price > b.price) ? 1 : -1);
+      case 'Ordem alfabética':
+        return products.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+      default:
+        return products;
+    }
+  }
   render() {
-    const { products } = this.props;
     return (
       <section className='Products'>
-        {products.map((product) => 
+        {this.filterProducts().map((product) =>
           <Product key={product.id} product={product} />
         )}
       </section>
@@ -16,4 +31,7 @@ class Products extends React.Component {
   }
 }
 
-export default Products ;
+const mapStateToProps = (state) => ({
+  filterBy: state.filter,
+});
+export default connect(mapStateToProps)(Products);
