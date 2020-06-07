@@ -20,7 +20,7 @@ class Header extends React.Component {
             <option value="Mais populares">Mais populares</option>
             <option value="Maior preço">Maior preço</option>
             <option value="Menor preço">Menor preço</option>
-            <option value="Ordem alfabética">Orden Alfabética</option>
+            <option value="Ordem alfabética">Ordem Alfabética</option>
           </select>
         </div>
 
