@@ -33,13 +33,34 @@ class Cart extends React.Component {
   }
 
   renderCheckout() {
-
+    const { totalPrice, freight } = this.props;
+    let currentFreight = freight;
+    if (totalPrice > 250) currentFreight = 0;
+    return (
+      <div className="checkoutContainer">
+        <div className="values">
+          <span>Subtotal</span>
+          <span>{`R$ ${totalPrice.toFixed(2)}`}</span>
+        </div>
+        <div className="values">
+          <span>Frete</span>
+          {(totalPrice > 250) ?
+          <span>GRÁTIS</span> :
+          <span>{`R$ ${freight.toFixed(2)}`}</span>
+          }
+        </div>
+        <div className="values">
+          <span>Total</span>
+          <span>{`R$ ${(totalPrice + currentFreight).toFixed(2)}`}</span>
+        </div>
+      </div>
+    );
   }
 
   render() {
     const { cartList, totalQuantity } = this.props;
     return (
-      <div>
+      <div className="cartBox">
         <div className="Cart-Title">
         <p>Carrinho {this.renderQuantity(totalQuantity)}</p>
         </div>
@@ -47,7 +68,7 @@ class Cart extends React.Component {
           {(cartList.length === 0) ? this.renderEmptyCart() : this.renderCart()}
         </div>
         <div>
-          {this.renderCheckout()}
+          {(totalQuantity > 0) ? this.renderCheckout() : null}
         </div>
       </div>
     );
@@ -56,6 +77,8 @@ class Cart extends React.Component {
 const mapStateToProps = (state) => ({
   cartList: state.cartList,
   totalQuantity: state.quantity,
+  totalPrice: state.totalPrice,
+  freight: state.freight,
 });
 
 export default connect(mapStateToProps)(Cart);

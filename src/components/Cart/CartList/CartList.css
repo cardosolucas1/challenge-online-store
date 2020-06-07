@@ -12,3 +12,18 @@
 .Cart-Title {
   margin-left: 5%;
 }
+
+.checkoutContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.values {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartBox {
+  width: 100%;
+}

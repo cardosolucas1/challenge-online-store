@@ -6,24 +6,31 @@ import {
 const INITIAL_STATE = {
   cartList: [],
   quantity: 0,
+  freight: 0,
+  totalPrice: 0,
   filter: 'Mais populares',
 }
 
 function checkProduct(state, action) {
-  const { cartList } = state;
+  const { cartList, totalPrice, freight } = state;
+  const { payload } = action;
   return ({
     ...state,
-    cartList: [...cartList, action.payload],
+    cartList: [...cartList, payload],
     quantity: cartList.length + 1,
+    totalPrice: totalPrice + payload.price,
+    freight: freight + 10,
   });
 }
 
-function removeProduct(state, id) {
-  const { cartList } = state;
+function removeProduct(state, product) {
+  const { cartList, totalPrice, freight } = state;
   return ({
     ...state,
-    cartList: cartList.filter((product) => product.id !== id),
+    cartList: cartList.filter((currentProduct) => currentProduct.id !== product.id),
     quantity: cartList.length - 1,
+    totalPrice: totalPrice - product.price,
+    freight: freight - 10,
   });
 }
 

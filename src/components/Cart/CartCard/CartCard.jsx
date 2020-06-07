@@ -11,7 +11,7 @@ class CartCard extends React.Component {
   }
 
   render() {
-    const { product: { name, price, image, id, quantity }, removeItem } = this.props;
+    const { product: { name, price, image, quantity }, removeItem } = this.props;
     return (
       <div
         onMouseEnter={() => this.setState({ hover: true })}
@@ -26,7 +26,7 @@ class CartCard extends React.Component {
           <p className="priceStyle">R$ {price}</p>
           <p>{quantity}</p>
         </div>
-        <div className="iconRemoveItem" onClick={() => removeItem(id)}>
+        <div className="iconRemoveItem" onClick={() => removeItem(this.props.product)}>
           {(this.state.hover) ?
             <img src="https://img.icons8.com/fluent/48/000000/filled-trash.png" width="70%"/> :
             null
