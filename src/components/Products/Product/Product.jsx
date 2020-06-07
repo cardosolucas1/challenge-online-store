@@ -14,7 +14,7 @@ class Product extends React.Component {
     return (
       <div>
         <p>{product.name}</p>
-        <p>R$ {product.price}</p>
+        <p className="PriceStyle">R$ {product.price}</p>
       </div>
     );
   }

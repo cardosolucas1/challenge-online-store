@@ -1,20 +1,26 @@
 import React from 'react';
+import { connect } from 'react-redux';
 // import PropTypes from 'prop-types';
+import { filterBySelect } from '../../redux/actions';
 import './Header.css';
 
 class Header extends React.Component {
   render() {
+    const { filterBy } = this.props;
     return (
       <header className='Container'>
         <div>
           <span>Games</span>
         </div>
         <div>
-          <select className="select" name='popularity'>
-            <option>Mais populares</option>
-            <option>Maior preço</option>
-            <option>Menor preço</option>
-            <option>Orden Alfabética</option>
+          <select
+            onChange={(event) => filterBy(event.target.value)}
+            className="select" name='popularity'
+          >
+            <option value="Mais populares">Mais populares</option>
+            <option value="Maior preço">Maior preço</option>
+            <option value="Menor preço">Menor preço</option>
+            <option value="Ordem alfabética">Orden Alfabética</option>
           </select>
         </div>
 
@@ -23,4 +29,8 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+const mapDispatchToProps = (dispatch) => ({
+  filterBy: (payload) => dispatch(filterBySelect(payload)),
+})
+
+export default connect(null, mapDispatchToProps)(Header);
