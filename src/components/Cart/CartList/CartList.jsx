@@ -32,6 +32,10 @@ class Cart extends React.Component {
     return (<span>({`${totalQuantity} itens`})</span>);
   }
 
+  renderCheckout() {
+
+  }
+
   render() {
     const { cartList, totalQuantity } = this.props;
     return (
@@ -41,6 +45,9 @@ class Cart extends React.Component {
         </div>
         <div>
           {(cartList.length === 0) ? this.renderEmptyCart() : this.renderCart()}
+        </div>
+        <div>
+          {this.renderCheckout()}
         </div>
       </div>
     );
