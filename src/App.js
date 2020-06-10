@@ -6,18 +6,17 @@ import './App.css';
 const products = require('./frontend-challenge/products.json');
 
 function App() {
-  return (
-    <div className="Home-Container">
-      <section className="Header-And-Products">
-        <Header />
-        <Products products={products}/>
-      </section>
-      <aside className="Cart-Aside">
-        <Cart />
-      </aside>
-    </div>
-  );
+	return (
+		<div className="Home-Container">
+			<section className="Header-And-Products">
+				<Header />
+				<Products products={products} />
+			</section>
+			<aside className="Cart-Aside">
+				<Cart />
+			</aside>
+		</div>
+	);
 }
 
 export default App;
-

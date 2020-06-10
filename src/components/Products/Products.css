@@ -1,7 +1,8 @@
 .Products {
   display: flex;
   flex-wrap: wrap;
-  margin-right: 25%;
+  margin-right: 27%;
+  margin-top: 3%;
 }
 
 .AddToCart {
