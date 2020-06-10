@@ -44,6 +44,7 @@ function clearState(state) {
     totalPrice: 0,
   };
 }
+
 function addToCartReducer(state = INITIAL_STATE, action) {
   const { payload } = action;
   switch(action.type) {
