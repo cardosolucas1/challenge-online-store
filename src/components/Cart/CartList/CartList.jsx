@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import CartCard from '../CartCard/CartCard';
 import icon from './cart-icon.svg';
 import './CartList.css';
@@ -53,6 +53,7 @@ class Cart extends React.Component {
           <span>Total</span>
           <span>{`R$ ${(totalPrice + currentFreight).toFixed(2)}`}</span>
         </div>
+        <button className="checkoutButton">Finalizar compra</button>
       </div>
     );
   }
@@ -74,6 +75,20 @@ class Cart extends React.Component {
     );
   }
 }
+
+Cart.propTypes = {
+  cartList: PropTypes.arrayOf(PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    score: PropTypes.number.isRequired,
+  })),
+  totalQuantity: PropTypes.number.isRequired,
+  totalPrice: PropTypes.number.isRequired,
+  freight: PropTypes.number.isRequired,
+};
+
 const mapStateToProps = (state) => ({
   cartList: state.cartList,
   totalQuantity: state.quantity,

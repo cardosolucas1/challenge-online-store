@@ -27,3 +27,19 @@
 .cartBox {
   width: 100%;
 }
+
+.checkoutButton {
+  color: #FFFFFF;;
+  background: #54A3FF 0% 0% no-repeat padding-box;
+  border: none;
+  border-radius: 3px;
+  margin-top: 2%;
+  opacity: 1;
+  padding: 5%;
+}
+
+.checkoutButton:hover {
+  background: #3486E6 0% 0% no-repeat padding-box;
+  cursor: pointer;
+}
+

@@ -32,15 +32,18 @@ class Product extends React.Component {
     const { product } = this.props;
     return (
       <div
+        data-testid="grey-square"
         onMouseEnter={() => this.setState({ hover: true })}
         onMouseLeave={() => this.setState({ hover: false })}
         className='Product'
       >
         <div className="Image-Square">
-          <img className="Product-Image" src={require(`../../../assets/${product.image}`)} alt="Imagem do produto" />
+          <img
+            className="Product-Image"
+            src={require(`../../../assets/${product.image}`)}
+            alt={`Imagem do produto ${product.name}`} />
         </div>
         <div>
-
         </div>
         <div>
           {(this.state.hover) ? this.renderAddToCart() : this.renderDetails()}
@@ -49,6 +52,17 @@ class Product extends React.Component {
     );
   }
 }
+
+Product.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    score: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+  }),
+  addItemToCart: PropTypes.func.isRequired,
+};
 
 const mapDispatchToProps = (dispatch) => ({
   addItemToCart: (payload) => dispatch(addToCart(payload)),

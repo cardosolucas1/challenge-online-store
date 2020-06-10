@@ -28,7 +28,11 @@ class CartCard extends React.Component {
         </div>
         <div className="iconRemoveItem" onClick={() => removeItem(this.props.product)}>
           {(this.state.hover) ?
-            <img src="https://img.icons8.com/fluent/48/000000/filled-trash.png" width="70%"/> :
+            <img
+              src="https://img.icons8.com/fluent/48/000000/filled-trash.png"
+              alt={`Imagem de uma capa do Jogo ${name}`}
+              width="70%"
+            /> :
             null
           }
         </div>
@@ -36,6 +40,17 @@ class CartCard extends React.Component {
     );
   }
 }
+
+CartCard.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    score: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+  }),
+  removeItem: PropTypes.func.isRequired,
+};
 
 const mapDispatchToProps = (dispatch) => ({
   removeItem: (id) => dispatch(removeCard(id)),
