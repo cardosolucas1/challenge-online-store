@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bbb590dc.chunk.css",
+    "main.js": "/static/js/main.d5e2d3d6.chunk.js",
+    "main.js.map": "/static/js/main.d5e2d3d6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.61244f66.js",
+    "runtime-main.js.map": "/static/js/runtime-main.61244f66.js.map",
+    "static/js/2.78a873e2.chunk.js": "/static/js/2.78a873e2.chunk.js",
+    "static/js/2.78a873e2.chunk.js.map": "/static/js/2.78a873e2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a27763c947d68853ae275cda16948ccf.js": "/precache-manifest.a27763c947d68853ae275cda16948ccf.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.bbb590dc.chunk.css.map": "/static/css/main.bbb590dc.chunk.css.map",
+    "static/js/2.78a873e2.chunk.js.LICENSE.txt": "/static/js/2.78a873e2.chunk.js.LICENSE.txt",
+    "static/media/Header.css": "/static/media/arrow-down-icon.f8a2d1e5.svg",
+    "static/media/call-of-duty-infinite-warfare.png": "/static/media/call-of-duty-infinite-warfare.6c60b558.png",
+    "static/media/call-of-duty-wwii.png": "/static/media/call-of-duty-wwii.cbc73160.png",
+    "static/media/cart-icon.svg": "/static/media/cart-icon.c519f830.svg",
+    "static/media/fifa-18.png": "/static/media/fifa-18.2e9e3fb3.png",
+    "static/media/horizon-zero-dawn.png": "/static/media/horizon-zero-dawn.d9ecc348.png",
+    "static/media/mortal-kombat-xl.png": "/static/media/mortal-kombat-xl.358b1230.png",
+    "static/media/shards-of-darkness.png": "/static/media/shards-of-darkness.c23a7ce9.png",
+    "static/media/super-mario-odyssey.png": "/static/media/super-mario-odyssey.4ad04c13.png",
+    "static/media/terra-media-sombras-de-mordor.png": "/static/media/terra-media-sombras-de-mordor.aecd10c4.png",
+    "static/media/the-witcher-iii-wild-hunt.png": "/static/media/the-witcher-iii-wild-hunt.1d707379.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.61244f66.js",
+    "static/js/2.78a873e2.chunk.js",
+    "static/css/main.bbb590dc.chunk.css",
+    "static/js/main.d5e2d3d6.chunk.js"
+  ]
+}
