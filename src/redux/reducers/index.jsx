@@ -1,7 +1,8 @@
 import {
   FILTER_BY_SELECT,
   ADD_TO_CART,
-  REMOVE_BY_ID } from '../actions';
+  REMOVE_BY_ID,
+  CLEAR_ALL_CART } from '../actions';
 
 const INITIAL_STATE = {
   cartList: [],
@@ -34,6 +35,15 @@ function removeProduct(state, product) {
   });
 }
 
+function clearState(state) {
+  return {
+    ...state,
+    cartList: [],
+    quantity: 0,
+    freight: 0,
+    totalPrice: 0,
+  };
+}
 function addToCartReducer(state = INITIAL_STATE, action) {
   const { payload } = action;
   switch(action.type) {
@@ -42,7 +52,9 @@ function addToCartReducer(state = INITIAL_STATE, action) {
     case FILTER_BY_SELECT:
       return ({...state, filter: payload });
     case REMOVE_BY_ID:
-      return removeProduct(state, payload)
+      return removeProduct(state, payload);
+    case CLEAR_ALL_CART:
+      return clearState(state);
     default:
       return state;
   }

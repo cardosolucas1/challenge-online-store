@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { clearAllCart } from '../../../redux/actions'
 import CartCard from '../CartCard/CartCard';
 import icon from './cart-icon.svg';
 import './CartList.css';
@@ -33,7 +34,7 @@ class Cart extends React.Component {
   }
 
   renderCheckout() {
-    const { totalPrice, freight } = this.props;
+    const { totalPrice, freight, clearCart } = this.props;
     let currentFreight = freight;
     if (totalPrice > 250) currentFreight = 0;
     return (
@@ -53,7 +54,7 @@ class Cart extends React.Component {
           <span>Total</span>
           <span>{`R$ ${(totalPrice + currentFreight).toFixed(2)}`}</span>
         </div>
-        <button className="checkoutButton">Finalizar compra</button>
+        <button onClick={() => clearCart()}className="checkoutButton">Finalizar compra</button>
       </div>
     );
   }
@@ -96,4 +97,8 @@ const mapStateToProps = (state) => ({
   freight: state.freight,
 });
 
-export default connect(mapStateToProps)(Cart);
+const mapDispatchToProps = (dispatch) => ({
+  clearCart: () => dispatch(clearAllCart()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);
